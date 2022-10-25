@@ -1,14 +1,29 @@
-name: value_hide
-description: A sample command-line application.
-version: 1.0.0
-# homepage: https://www.example.com
+name: april_value_hide
+description: A tool who can hide private values with byte offsets.
+version: 0.0.1
+homepage: 'https://github.com/AAAAAApril/ValueHide'
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
+  sdk: '>=2.18.0 <3.0.0'
 
-# dependencies:
-#   path: ^1.8.0
+dependencies:
+  # https://pub.flutter-io.cn/packages/path
+  path: ^1.8.2
+  # https://pub.flutter-io.cn/packages/yaml
+  yaml: ^3.1.1
 
 dev_dependencies:
-  lints: ^2.0.0
-  test: ^1.16.0
+  # https://pub.flutter-io.cn/packages/build_runner
+  build_runner: ^2.3.2
+
+# for test
+april_value_hide:
+  jsons_dir: example/jsons
+  generated_file_dir: example
+  generated_file_name: HiddenValues
+  offset: -999
+
+# 发布插件：命令行 执行命令
+# flutter packages pub publish
+# 或者
+# flutter packages pub publish --server=https://pub.dartlang.org
