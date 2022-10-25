@@ -8,13 +8,13 @@ Run `flutter pub global activate april_value_hide` in project Terminal for activ
 
 ```yaml
 april_value_hide:
-  jsons_dir: 'lib/example/jsons'
-  generated_file_dir: 'lib/generated'
+  jsons_dir: 'example/jsons'
+  generated_file_dir: 'example/generated'
   generated_file_name: 'HiddenValues'
   offset: '-999'
 ```
 
-2. There is a json file named `Values.json` and in directory `lib/example/jsons` witch content like
+2. There is a json file named `Values.json` and in directory `example/jsons` witch content like
    this:
 
 ```json

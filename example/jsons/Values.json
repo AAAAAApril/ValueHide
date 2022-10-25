@@ -1,0 +1,9 @@
+{
+  "@desc": "Descriptions of the Dart class who will be generated.",
+  "intValueKey": 999,
+  "@intValueKey": "Descriptions of the int value.",
+  "doubleValueKey": 123.123,
+  "@doubleValueKey": "Descriptions of the double value.",
+  "stringValueKey": "The value is a String.",
+  "@stringValueKey": "Descriptions of the String value."
+}
