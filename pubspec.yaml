@@ -16,13 +16,6 @@ dev_dependencies:
   # https://pub.flutter-io.cn/packages/build_runner
   build_runner: ^2.3.2
 
-# for test
-april_value_hide:
-  jsons_dir: example/jsons
-  generated_file_dir: example
-  generated_file_name: HiddenValues
-  offset: -999
-
 # 发布插件：命令行 执行命令
 # flutter packages pub publish
 # 或者

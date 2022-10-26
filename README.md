@@ -15,7 +15,8 @@ april_value_hide:
 ```
 
 2. There is a json file named `Values1.json` and in directory `example/jsons` witch content like
-   this:
+   this:  
+There is support three value types of `int` `double` and `String` only.  
 
 ```json
 {
