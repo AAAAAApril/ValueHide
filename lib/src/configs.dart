@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:yaml/yaml.dart';
+import 'package:path/path.dart' as path;
 
 import 'utils.dart';
 
@@ -15,11 +16,8 @@ class PubspecConfig {
   ///存放需要隐藏的值的 json 文件们的文件夹路径
   late final String jsonFilesParentDirectoryPath;
 
-  ///存放生成的 Dart 文件的文件夹路径
-  late final String generatedFileParentDirectoryPath;
-
-  ///生成的 Dart 文件名
-  late final String generatedFileName;
+  ///生成的 Dart 文件路径
+  late final String generatedFilePath;
 
   ///给字符串的字节码的偏移量
   late final int offset;
@@ -40,6 +38,14 @@ class PubspecConfig {
       throw Exception('未找到 [$configNodeName] 节点，该节点用于添加配置信息');
     }
 
-    //TODO
+    /// 需要隐藏的 json 文件们所在的文件夹 路径
+    jsonFilesParentDirectoryPath = parentNode[jsonsDirNodeName] as String;
+
+    /// 生成的 Dart 文件路径
+    generatedFilePath = path.join(
+      parentNode[generatedFileDirNodeName] as String,
+      parentNode[generatedFileNameNodeName] as String,
+      '.dart',
+    );
   }
 }
