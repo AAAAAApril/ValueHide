@@ -44,8 +44,12 @@ class PubspecConfig {
     /// 生成的 Dart 文件路径
     generatedFilePath = path.join(
       parentNode[generatedFileDirNodeName] as String,
-      parentNode[generatedFileNameNodeName] as String,
-      '.dart',
+      '${parentNode[generatedFileNameNodeName] as String}.dart',
     );
+
+    ///需要偏移的量
+    offset = int.tryParse(
+            (parentNode[offsetNodeName] as Object?)?.toString() ?? '0') ??
+        0;
   }
 }
