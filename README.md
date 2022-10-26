@@ -9,7 +9,7 @@ Run `flutter pub global activate april_value_hide` in project Terminal for activ
 ```yaml
 april_value_hide:
   jsons_dir: 'example/jsons'
-  generated_file_dir: 'example/generated'
+  generated_file_dir: 'example'
   generated_file_name: 'HiddenValues'
   offset: '-999'
 ```
